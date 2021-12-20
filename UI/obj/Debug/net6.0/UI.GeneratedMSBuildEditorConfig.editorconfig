@@ -1,0 +1,132 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = UI
+build_property.RootNamespace = UI
+build_property.ProjectDir = D:\bitirmeTezi\UI\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = D:\bitirmeTezi\UI
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/bitirmeTezi/UI/Views/Account/SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduSW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Account/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Advertisement/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2ZXJ0aXNlbWVudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Advertisement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2ZXJ0aXNlbWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Advertisement/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2ZXJ0aXNlbWVudFxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/BreadCrumb/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJlYWRDcnVtYlxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/BreadCrumb/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJlYWRDcnVtYlxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/BreadCrumb/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJlYWRDcnVtYlxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Counter/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Counter/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Counter/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRlclxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Documentary/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRhcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Documentary/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRhcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Documentary/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRhcnlcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Home/Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Link/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlua1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Link/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlua1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Link/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlua1xVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Presentation/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc2VudGF0aW9uXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Presentation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc2VudGF0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Presentation/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc2VudGF0aW9uXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Shared/LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExvZ2luUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Shared/_PanelLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYW5lbExheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Video/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlkZW9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Video/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlkZW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/Video/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlkZW9cVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bitirmeTezi/UI/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

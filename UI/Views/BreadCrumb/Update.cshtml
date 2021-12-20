@@ -1,0 +1,41 @@
+﻿@model BreadCrumbUpdateDto
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_PanelLayout.cshtml";
+}
+
+<main class="main">
+    <div class="page-content">
+        <section class="mt-4 pt-10 pb-8">
+            <div class="container">
+                <div class="tab-pane" id="account">
+                    <form asp-action="Update" method="post" enctype="multipart/form-data" class="form">
+                        <div asp-validation-summary="ModelOnly" class="text-color"></div>
+                        <label>Başlık</label>
+                        <input type="text" asp-for="Title" class="form-control mb-0" name="Title" required="">
+                        <span asp-validation-for="Title"></span>
+
+                        <label>Açıklama</label>
+                        <input type="text" asp-for="MiniHeader" class="form-control mb-0" name="MiniHeader" required="">
+                        <span asp-validation-for="MiniHeader"></span>
+
+                        <label>İçerik</label>
+                        <textarea class="form-control" asp-for="Description" name="Description" required="" style="margin: 0px; width: 890px; height: 150px;"></textarea>
+                        <span asp-validation-for="Description"></span>
+                        <br />
+
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                        <a asp-action="Index" class="btn btn-secondary">Tüm Breadcrumblar</a>
+
+                        <div style="visibility:hidden">
+                            <label>Durum</label>
+                            <input type="checkbox" asp-for="Status" name="Status" id="switch" checked enabled />
+                            <label class="togglechck" for="switch">Toggle</label>
+                            <span asp-validation-for="Status"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>

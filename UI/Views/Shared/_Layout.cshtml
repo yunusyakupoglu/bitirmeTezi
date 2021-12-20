@@ -1,0 +1,911 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <meta name="keywords" c!importantmportantntent="Düzce Üniversitesi" />
+    <meta name="description" content="Değer Üreten Üniversite">
+    <meta name="author" content="Düzce Üniversitesi">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="~/images/icons/favicon.png">
+    <!-- Preload Font -->
+    <link rel="preload" href="~/fonts/riode.ttf?5gap68" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="~/vendor/fontawesome-free/webfonts/fa-solid-900.woff2" as="font" type="font/woff2"
+          crossorigin="anonymous">
+    <link rel="preload" href="~/vendor/fontawesome-free/webfonts/fa-brands-400.woff2" as="font" type="font/woff2"
+          crossorigin="anonymous">
+    <script>
+        WebFontConfig = {
+            google: { families: [ 'Jost:300,400,500,600,700', 'Poppins:300,400,500,600,700,800' ] }
+        };
+        ( function ( d ) {
+            var wf = d.createElement( 'script' ), s = d.scripts[ 0 ];
+            wf.src = 'js/webfont.js';
+            wf.async = true;
+            s.parentNode.insertBefore( wf, s );
+        } )( document );
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="~/vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendor/animate/animate.min.css">
+
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" type="text/css" href="~/vendor/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendor/owl-carousel/owl.carousel.min.css">
+
+    <link rel="stylesheet" type="text/css" href="~/vendor/sticky-icon/stickyicon.css">
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" type="text/css" href="~/css/demo-diamart.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/demo12.min.css">
+    <style>
+        .linkcolor:hover {
+            color: #85929E;
+            transition: all 0.9s ease
+        }
+
+        .login-link:hover {
+            color: #85929E !important;
+            transition: all 0.9s ease
+        }
+
+        .menu li > a:hover {
+            color: #283B93 !important;
+            transition: all 0.9s ease
+        }
+
+            .menu li > a:hover::after {
+                color: #283B93 !important;
+                transition: all 0.9s ease
+            }
+
+            .menu li > a:hover::before {
+                color: #283B93 !important;
+                transition: all 0.9s ease
+            }
+    </style>
+</head>
+<body class="home">
+    <div class="page-wrapper">
+        <h1 class="d-none">Düzce Üniversitesi | Değer Üreten Üniversite</h1>
+        <header class="header">
+            <div class="header-top" style="background-color:#D4E6F1 !important; color:#34495E !important;">
+                <div class="container">
+                    <div class="header-left">
+                        <div class="welcome-msg">
+                            <a href="#" class="help linkcolor"><i>Çevre ve Sağlık Alanında İhtisas Üniversitesi</i></a>
+                        </div>
+                    </div>
+                    <div class="header-right">
+
+                        <ul class="menu">
+                            <li>
+                                <a href="#" class="linkcolor">Hızlı Erişim</a>
+                                <ul>
+                                    <li><a href="about-us.html">Personel</a></li>
+                                    <li><a href="contact-us.html">Öğrenci</a></li>
+                                    <li><a href="account.html">Hastane</a></li>
+                                    <li><a href="wishlist.html">Teknopark</a></li>
+                                    <li><a href="faq.html">Sanat Galerisi</a></li>
+                                    <li><a href="coming-soon.html">Mezunlar</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <a asp-controller="Account" asp-action="SignIn" class="linkcolor mr-0"><i class="d-icon-user"></i>Giriş Yap</a>
+                        <div class="dropdown cartcolor cart-dropdown off-canvas type3 ml-2">
+                            <a href="#" class="cart-toggle linkcolor" style="background-color:#283B93">
+                                <img src="~/images/logos/dukkan.png" alt="Dükkan" width="65" height="100%" />
+                            </a>
+                            <div class="canvas-overlay"></div>
+                            <!-- End Cart Toggle -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End HeaderTop -->
+            <div class="header-middle sticky-header fix-top sticky-content" style="background-color:#F2F3F4; color:black">
+                <div class="container">
+                    <div class="header-left">
+                        <a href="#" class="mobile-menu-toggle mr-0">
+                            <i class="d-icon-bars2"></i>
+                        </a>
+                        <a asp-controller="Home" asp-action="Index" class="logo d-none d-lg-block">
+                            <img src="~/images/logos/du15yilyazi.png" alt="logo" width="250" height="100%" />
+                        </a>
+                        <!-- End Logo -->
+                    </div>
+                    <div class="header-center d-flex justify-content-center">
+                        <a href="demo-diamart.html" class="logo d-block d-lg-none">
+                            <img src="~/images/logos/du15yilyazi.png" alt="logo" width="250" height="100%" />
+                        </a>
+                        <!-- End Logo -->
+                    </div>
+                    <div class="header-right">
+                        <nav class="main-nav mr-4">
+                            <ul class="menu menu-active-underline">
+                                <li>
+                                    <a href="#">Üniversitemiz</a>
+                                    <ul>
+                                        <li><a href="about-us.html">Düzce</a></li>
+                                        <li><a href="contact-us.html">Kuruluş</a></li>
+                                        <li>
+                                            <a href="error-404.html">Yönetim</a>
+                                            <ul>
+                                                <li><a href="error-404.html">Rektör</a></li>
+                                                <li><a href="error-404-1.html">Rektör Yardımcıları</a></li>
+                                                <li><a href="error-404-2.html">Senato</a></li>
+                                                <li><a href="error-404-3.html">Yönetim Kurulu</a></li>
+                                                <li><a href="error-404-3.html">Genel Sekreter</a></li>
+                                                <li><a href="error-404-3.html">Teşkilat Şeması</a></li>
+                                                <li><a href="error-404-3.html">Senato ve Yönetim Kurulu Kararları</a></li>
+                                                <li><a href="error-404-3.html">Rektörlerimiz</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="error-404.html">Sayılarla DÜ</a>
+                                            <ul>
+                                                <li><a href="error-404.html">Öğrenci Sayıları</a></li>
+                                                <li><a href="error-404-1.html">Personel Sayıları</a></li>
+                                                <li><a href="error-404-2.html">Bölüm ve Program Sayıları</a></li>
+                                                <li><a href="error-404-3.html">Proje Sayıları</a></li>
+                                                <li><a href="error-404-3.html">Fikri Mülkiyet</a></li>
+                                                <li><a href="error-404-3.html">Derslik</a></li>
+                                                <li><a href="error-404-3.html">Kapalı Alan</a></li>
+                                                <li><a href="error-404-3.html">Üniversite İzleme ve Değerlendirme Raporu</a></li>
+                                                <li><a href="error-404-3.html">Bütçe</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="error-404.html">Sıralamalar</a>
+                                            <ul>
+                                                <li><a href="error-404.html">URAP</a></li>
+                                                <li><a href="error-404-1.html">THE</a></li>
+                                                <li><a href="error-404-2.html">Girişimcilik Endeksi</a></li>
+                                                <li><a href="error-404-3.html">Green Metric</a></li>
+                                                <li><a href="error-404-3.html">İnnovaLig</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="coming-soon.html">İlkler</a></li>
+                                        <li>
+                                            <a href="error-404.html">Kurumsal Strateji</a>
+                                            <ul>
+                                                <li><a href="error-404.html">Stratejik Plan 2020-2024</a></li>
+                                                <li><a href="error-404-1.html">Kalite Politikası</a></li>
+                                                <li><a href="error-404-2.html">Sürekli İyileştirme</a></li>
+                                                <li><a href="error-404-3.html">KİDR</a></li>
+                                                <li><a href="error-404-3.html">Sürdürebilirlik Raporu</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="coming-soon.html">İdari Birimler</a></li>
+                                        <li>
+                                            <a href="error-404.html">Kampüs Yaşamı</a>
+                                            <ul>
+                                                <li><a href="error-404.html">Yeme/İçme</a></li>
+                                                <li><a href="error-404-1.html">Spor Merkezleri</a></li>
+                                                <li><a href="error-404-2.html">Ulaşım</a></li>
+                                                <li><a href="error-404-3.html">Barınma</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="coming-soon.html">İşbirlikleri</a></li>
+                                        <li><a href="coming-soon.html">Tanıtım Filmleri/Fotoğraf Galerisi</a></li>
+                                        <li><a href="coming-soon.html">Yönetmelik ve Yönergeler</a></li>
+                                        <li><a href="coming-soon.html">Bilgi Güvenliği Politikamız</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Akademik</a>
+                                    <ul>
+                                        <li>
+                                            <a href="error-404.html">Fakülteler</a>
+                                            <ul>
+                                                <li><a href="error-404.html">Akçakoca Bey Siyasal Bilgiler Fakültesi</a></li>
+                                                <li><a href="error-404-1.html">Eğitim Fakültesi</a></li>
+                                                <li><a href="error-404-2.html">Fen Edebiyat Fakültesi</a></li>
+                                                <li><a href="error-404-3.html">İlahiyat Fakültesi</a></li>
+                                                <li><a href="error-404-3.html">İşletme Fakültesi</a></li>
+                                                <li><a href="error-404-3.html">Mühendislik Fakültesi</a></li>
+                                                <li><a href="error-404-3.html">Orman Fakültesi</a></li>
+                                                <li><a href="error-404-3.html">Sağlık Bilimleri Fakültesi</a></li>
+                                                <li><a href="error-404-3.html">Sanat Tasarım ve Mimarlık Fakültesi</a></li>
+                                                <li><a href="error-404-3.html">Spor Bilimleri Fakültesi</a></li>
+                                                <li><a href="error-404-3.html">Tıp Fakültesi</a></li>
+                                                <li><a href="error-404-3.html">Ziraat Fakültesi</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="error-404.html">Enstitüler</a>
+                                            <ul>
+                                                <li><a href="error-404.html">Lisansüstü Eğitim Enstitüsü</a></li>
+                                                <li><a href="error-404-1.html">Güzel Sanatlar Enstitüsü</a></li>
+                                                <li><a href="error-404-2.html">Fen Bilimleri Enstitüsü</a></li>
+                                                <li><a href="error-404-3.html">Sağlık Bilimleri Enstitüsü</a></li>
+                                                <li><a href="error-404-3.html">Sosyal Bilimler Enstitüsü</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="error-404.html">Yüksekokullar</a>
+                                            <ul>
+                                                <li><a href="error-404.html">Akçakoca Turizm İşletme ve Otelcilik Yüksekokulu</a></li>
+                                                <li><a href="error-404-1.html">Hakime ERCİYAS Yabancı Diller Yüksekokulu</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="error-404.html">Meslek Yüksekokulları</a>
+                                            <ul>
+                                                <li><a href="error-404.html">Akçakoca MYO</a></li>
+                                                <li><a href="error-404.html">Çilimli MYO</a></li>
+                                                <li><a href="error-404.html">Düzce MYO</a></li>
+                                                <li><a href="error-404.html">Dr. Engin PAK Cumayeri MYO</a></li>
+                                                <li><a href="error-404.html">Gölyaka MYO</a></li>
+                                                <li><a href="error-404.html">Gümüşova MYO</a></li>
+                                                <li><a href="error-404.html">Kaynaşlı MYO</a></li>
+                                                <li><a href="error-404.html">Ormancılık MYO</a></li>
+                                                <li><a href="error-404.html">Sağlık Hizmetleri MYO</a></li>
+                                                <li><a href="error-404.html">Sosyal Bilimler MYO</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="coming-soon.html">Kurullar</a></li>
+                                        <li>
+                                            <a href="error-404.html">Bölüm Başkanlıkları</a>
+                                            <ul>
+                                                <li><a href="error-404.html">Atatürk İlkeleri ve İnkılap Tarihi Bölümü</a></li>
+                                                <li><a href="error-404-1.html">Türk Dili Bölümü</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Araştırma</a>
+                                    <ul>
+                                        <li><a href="about-us.html">Araştırma Merkezleri</a></li>
+                                        <li><a href="contact-us.html">Laboratuvar Envanteri</a></li>
+                                        <li><a href="coming-soon.html">Yayınlar Projeler</a></li>
+                                        <li><a href="coming-soon.html">Hakemli Dergiler</a></li>
+                                        <li><a href="coming-soon.html">Teknoloji Transfer Ofisi</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">İhtisaslaşma</a>
+                                    <ul>
+                                        <li><a href="about-us.html">Program Kapsamı</a></li>
+                                        <li><a href="contact-us.html">Tıbbi Bitki Yetiştiriciliği</a></li>
+                                        <li><a href="coming-soon.html">Ürünler/Markalar</a></li>
+                                        <li><a href="coming-soon.html">Üretim Merkezi</a></li>
+                                        <li><a href="coming-soon.html">Geleneksel ve Tamamlayıcı Tıp Faaliyetleri</a></li>
+                                        <li><a href="coming-soon.html">Tarımsal Atıkların Geri Kazanımı Faaliyetleri</a></li>
+                                        <li><a href="coming-soon.html">Arıcılık/Arı Ürünleri</a></li>
+                                        <li><a href="coming-soon.html">Bilimsel Yayınlar</a></li>
+                                        <li><a href="coming-soon.html">İşbirlikleri</a></li>
+                                        <li><a href="coming-soon.html">Etkinlikler</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about-us.html"><b style="color:#31bfae">DÜ</b>Yayınlar</a></li>
+                                <li><a href="about-us.html"><b style="color:#31bfae">DÜ</b>Duyurular</a></li>
+                            </ul>
+                        </nav>
+
+                        <span class="divider mr-4"></span>
+                        <div class="header-search hs-toggle d-block">
+                            <a href="#" class="search-toggle d-flex align-items-center">
+                                <i class="d-icon-search" style="color:black"></i>
+                            </a>
+                            <form action="#" class="input-wrapper">
+                                <input type="text" class="form-control" name="search" autocomplete="off"
+                                       placeholder="Search your keyword..." required />
+                                <button class="btn btn-search" type="submit">
+                                    <i class="d-icon-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        @RenderBody()
+
+        <!-- End of Main -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-middle">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="widget widget-about">
+                                <h4 class="widget-title">About Us</h4>
+                                <div class="widget-body">
+                                    <p class="font-primary ls-normal mb-4 pr-lg-3">
+
+                                        Lorem Ipsum. Proin gravida nibh vel
+                                        velit auctor aliquet.
+                                        Aenean sollicitudin,
+                                        lorem quis bibendum auctor, nisi elit...
+
+                                    </p>
+                                </div>
+                                <a asp-controller="Home" asp-action="Index" class="logo-footer pb-4 pb-lg-0">
+                                    <img src="~/images/logos/du15yilyazi.png" alt="logo-footer" width="154"
+                                         height="43" />
+                                </a>
+                            </div>
+                            <!-- End Widget -->
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="widget">
+                                <h4 class="widget-title">Useful links</h4>
+                                <ul class="widget-body">
+                                    <li>
+                                        <a href="">Features</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pages</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Portfolio</a>
+                                    </li>
+                                    <li>
+                                        <a href="about-us.html">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact-us.html">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Widget -->
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="widget">
+                                <h4 class="widget-title">Our Services</h4>
+                                <ul class="widget-body">
+                                    <li>
+                                        <a href="#">Cosmetia Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Riode Gift</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Social Media</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Professional</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Cosmetia Shop</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Widget -->
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="widget widget-info mb-0">
+                                <h4 class="widget-title">Contact Us</h4>
+                                <ul class="widget-body mb-5">
+                                    <li>
+                                        <label>Address:</label>
+                                        <a href="#">123 Street Name, City, England</a>
+                                    </li>
+                                    <li>
+                                        <label>Phone:</label>
+                                        <a href="tel:#">(123) 456-7890</a>
+                                    </li>
+                                    <li>
+                                        <label>Email:</label>
+                                        <a href="mailto:mail@riode.com">Mail@example.com</a>
+                                    </li>
+                                </ul>
+                                <div class="social-links">
+                                    <a href="#" class="social-link social-facebook fab fa-facebook-f"></a>
+                                    <a href="#" class="social-link social-twitter fab fa-twitter"></a>
+                                    <a href="#" class="social-link social-linkedin fab fa-linkedin-in"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End FooterMiddle -->
+                <div class="footer-bottom">
+                    <div class="footer-left mb-0">
+                    </div>
+                    <div class="footer-center mb-0">
+                        <p class="copyright">Riode eCommerce &copy; 2021. All Rights Reserved</p>
+                    </div>
+                    <div class="footer-right mb-0">
+                    </div>
+                </div>
+                <!-- End FooterBottom -->
+            </div>
+        </footer>
+    </div>
+
+    <!-- Sticky Footer -->
+    <div class="sticky-footer sticky-content fix-bottom">
+        <a href="demo-diamart.html" class="sticky-link">
+            <i class="d-icon-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="demo-diamart-shop.html" class="sticky-link">
+            <i class="d-icon-volume"></i>
+            <span>Categories</span>
+        </a>
+        <a href="wishlist.html" class="sticky-link">
+            <i class="d-icon-heart"></i>
+            <span>Wishlist</span>
+        </a>
+        <a href="account.html" class="sticky-link">
+            <i class="d-icon-user"></i>
+            <span>Account</span>
+        </a>
+        <div class="header-search hs-toggle dir-up">
+            <a href="#" class="search-toggle sticky-link">
+                <i class="d-icon-search"></i>
+                <span>Search</span>
+            </a>
+            <form action="#" class="input-wrapper">
+                <input type="text" class="form-control" name="search" autocomplete="off"
+                       placeholder="Search your keyword..." required />
+                <button class="btn btn-search" type="submit">
+                    <i class="d-icon-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-- Scroll Top -->
+    <a id="scroll-top" href="#top" title="Top" role="button" class="scroll-top"><i class="d-icon-arrow-up"></i></a>
+
+    <!-- MobileMenu -->
+    <div class="mobile-menu-wrapper">
+        <div class="mobile-menu-overlay">
+        </div>
+        <!-- End of Overlay -->
+        <a class="mobile-menu-close" href="#"><i class="d-icon-times"></i></a>
+        <!-- End of CloseButton -->
+        <div class="mobile-menu-container scrollable">
+            <form action="#" class="input-wrapper">
+                <input type="text" class="form-control" name="search" autocomplete="off"
+                       placeholder="Search your keyword..." required />
+                <button class="btn btn-search" type="submit">
+                    <i class="d-icon-search"></i>
+                </button>
+            </form>
+            <!-- End of Search Form -->
+            <ul class="mobile-menu mmenu-anim">
+                <li>
+                    <a href="demo-diamart.html">Home</a>
+                </li>
+                <li>
+                    <a href="demo-diamart-shop.html">Categories</a>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Variations 1
+                            </a>
+                            <ul>
+                                <li><a href="shop-classic-filter.html">Classic Filter</a></li>
+                                <li><a href="shop-left-toggle-sidebar.html">Left Toggle Filter</a></li>
+                                <li><a href="shop-right-toggle-sidebar.html">Right Toggle Sidebar</a></li>
+                                <li>
+
+                                    <a href="shop-horizontal-filter.html">Horizontal Filter </a>
+                                </li>
+                                <li><a href="shop-navigation-filter.html">Navigation Filter</a></li>
+
+                                <li><a href="shop-off-canvas-filter.html">Off-Canvas Filter </a></li>
+                                <li><a href="shop-top-banner.html">Top Banner</a></li>
+                                <li><a href="shop-inner-top-banner.html">Inner Top Banner</a></li>
+                                <li><a href="shop-with-bottom-block.html">With Bottom Block</a></li>
+                                <li><a href="shop-category-in-page-header.html">Category In Page Header</a>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Variations 2
+                            </a>
+                            <ul>
+                                <li><a href="shop-grid-3cols.html">3 Columns Mode</a></li>
+                                <li><a href="shop-grid-4cols.html">4 Columns Mode</a></li>
+                                <li><a href="shop-grid-5cols.html">5 Columns Mode</a></li>
+                                <li><a href="shop-grid-6cols.html">6 Columns Mode</a></li>
+                                <li><a href="shop-grid-7cols.html">7 Columns Mode</a></li>
+                                <li><a href="shop-grid-8cols.html">8 Columns Mode</a></li>
+                                <li><a href="shop-list-mode.html">List Mode</a></li>
+                                <li><a href="shop-pagination.html">Pagination</a></li>
+                                <li><a href="shop-infinite-ajaxscroll.html">Infinite Ajaxscroll </a></li>
+                                <li><a href="shop-loadmore-button.html">Loadmore Button</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Variations 3
+                            </a>
+                            <ul>
+                                <li><a href="shop-category-grid-shop.html">Category Grid Shop</a></li>
+                                <li><a href="shop-category+products.html">Category + Products</a></li>
+                                <li>
+
+                                    <a href="shop-default-1.html">Shop Default 1 </a>
+                                </li>
+                                <li><a href="shop-default-2.html">Shop Default 2</a></li>
+                                <li><a href="shop-default-3.html">Shop Default 3</a></li>
+                                <li><a href="shop-default-4.html">Shop Default 4</a></li>
+                                <li><a href="shop-default-5.html">Shop Default 5</a></li>
+                                <li><a href="shop-default-6.html">Shop Default 6</a></li>
+                                <li><a href="shop-default-7.html">Shop Default 7</a></li>
+                                <li><a href="shop-default-8.html">Shop Default 8</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="demo-diamart-product.html">Products</a>
+                    <ul>
+                        <li>
+                            <a href="#">Product Pages</a>
+                            <ul>
+                                <li><a href="product-simple.html">Simple Product</a></li>
+                                <li><a href="product-featured.html">Featured &amp; On Sale</a></li>
+                                <li><a href="product.html">Variable Product</a></li>
+                                <li>
+
+                                    <a href="product-variable-swatch.html">
+
+                                        Variation Swatch
+                                        Product
+
+                                    </a>
+
+                                </li>
+                                <li><a href="product-grouped.html">Grouped Product </a></li>
+                                <li><a href="product-external.html">External Product</a></li>
+                                <li><a href="product-in-stock.html">In Stock Product</a></li>
+                                <li><a href="product-out-stock.html">Out of Stock Product</a></li>
+                                <li><a href="product-upsell.html">Upsell Products</a></li>
+                                <li><a href="product-cross-sell.html">Cross Sell Products</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Product Layouts</a>
+                            <ul>
+                                <li><a href="product-vertical.html">Vertical Thumb</a></li>
+                                <li><a href="product-horizontal.html">Horizontal Thumb</a></li>
+                                <li><a href="product-gallery.html">Gallery Type</a></li>
+                                <li><a href="product-grid.html">Grid Images</a></li>
+                                <li><a href="product-masonry.html">Masonry Images</a></li>
+                                <li><a href="product-sticky.html">Sticky Info</a></li>
+                                <li><a href="product-sticky-both.html">Left & Right Sticky</a></li>
+                                <li><a href="product-left-sidebar.html">With Left Sidebar</a></li>
+                                <li><a href="product-right-sidebar.html">With Right Sidebar</a></li>
+                                <li><a href="product-full.html">Full Width Layout </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Product Features</a>
+                            <ul>
+                                <li><a href="product-sale.html">Sale Countdown</a></li>
+                                <li><a href="product-hurryup.html">Hurry Up Notification </a></li>
+                                <li><a href="product-attribute-guide.html">Attribute Guide </a></li>
+                                <li><a href="product-sticky-cart.html">Add Cart Sticky</a></li>
+                                <li>
+
+                                    <a href="product-thumbnail-label.html">Labels on Thumbnail</a>
+                                </li>
+                                <li>
+
+                                    <a href="product-more-description.html">
+
+                                        More Description
+                                        Tabs
+
+                                    </a>
+
+                                </li>
+                                <li><a href="product-accordion-data.html">Data In Accordion</a></li>
+                                <li><a href="product-tabinside.html">Data Inside</a></li>
+                                <li>
+
+                                    <a href="product-video.html">Video Thumbnail </a>
+                                </li>
+                                <li><a href="product-360-degree.html">360 Degree Thumbnail </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Pages</a>
+                    <ul>
+                        <li><a href="about-us.html">About</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="account.html">Login</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li>
+
+                            <a href="error-404.html">Error 404</a>
+                            <ul>
+                                <li><a href="error-404.html">Error 404-1</a></li>
+                                <li><a href="error-404-1.html">Error 404-2</a></li>
+                                <li><a href="error-404-2.html">Error 404-3</a></li>
+                                <li><a href="error-404-3.html">Error 404-4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="blog-classic.html">Blog</a>
+                    <ul>
+                        <li><a href="blog-classic.html">Classic</a></li>
+                        <li><a href="blog-listing.html">Listing</a></li>
+                        <li>
+                            <a href="#">Grid</a>
+                            <ul>
+                                <li><a href="blog-grid-2col.html">Grid 2 columns</a></li>
+                                <li><a href="blog-grid-3col.html">Grid 3 columns</a></li>
+                                <li><a href="blog-grid-4col.html">Grid 4 columns</a></li>
+                                <li><a href="blog-grid-sidebar.html">Grid sidebar</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Masonry</a>
+                            <ul>
+                                <li><a href="blog-masonry-2col.html">Masonry 2 columns</a></li>
+                                <li><a href="blog-masonry-3col.html">Masonry 3 columns</a></li>
+                                <li><a href="blog-masonry-4col.html">Masonry 4 columns</a></li>
+                                <li><a href="blog-masonry-sidebar.html">Masonry sidebar</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Mask</a>
+                            <ul>
+                                <li><a href="blog-mask-grid.html">Blog mask grid</a></li>
+                                <li><a href="blog-mask-masonry.html">Blog mask masonry</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="post-single.html">Single Post</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="element.html">Elements</a>
+                    <ul>
+                        <li>
+                            <a href="#">Elements 1</a>
+                            <ul>
+                                <li><a href="element-accordions.html">Accordions</a></li>
+                                <li><a href="element-alerts.html">Alert &amp; Notification</a></li>
+
+                                <li>
+
+                                    <a href="element-banner-effect.html">
+
+                                        Banner Effect
+
+                                    </a>
+
+                                </li>
+                                <li>
+
+                                    <a href="element-banner.html">
+
+                                        Banner
+                                    </a>
+
+                                </li>
+                                <li><a href="element-blog-posts.html">Blog Posts</a></li>
+                                <li>
+
+                                    <a href="element-breadcrumb.html">
+
+                                        Breadcrumb
+                                    </a>
+
+                                </li>
+                                <li><a href="element-buttons.html">Buttons</a></li>
+                                <li><a href="element-cta.html">Call to Action</a></li>
+                                <li>
+
+                                    <a href="element-countdown.html">
+
+                                        Countdown
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Elements 2</a>
+                            <ul>
+                                <li><a href="element-counter.html">Counter </a></li>
+                                <li>
+
+                                    <a href="element-creative-grid.html">
+
+                                        Creative Grid
+
+                                    </a>
+
+                                </li>
+                                <li>
+
+                                    <a href="element-animation.html">
+
+                                        Entrance Effect
+
+                                    </a>
+
+                                </li>
+                                <li>
+
+                                    <a href="element-floating.html">
+
+                                        Floating
+
+                                    </a>
+
+                                </li>
+                                <li>
+
+                                    <a href="element-hotspot.html">
+
+                                        Hotspot
+
+                                    </a>
+
+                                </li>
+                                <li><a href="element-icon-boxes.html">Icon Boxes</a></li>
+                                <li><a href="element-icons.html">Icons</a></li>
+                                <li>
+
+                                    <a href="element-image-box.html">
+
+                                        Image box
+
+                                    </a>
+
+                                </li>
+                                <li><a href="element-instagrams.html">Instagrams</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Elements 3</a>
+                            <ul>
+
+                                <li><a href="element-categories.html">Product Category</a></li>
+                                <li><a href="element-products.html">Products</a></li>
+                                <li>
+
+                                    <a href="element-product-banner.html">
+
+                                        Products + Banner
+
+                                    </a>
+
+                                </li>
+                                <li>
+
+                                    <a href="element-product-grid.html">
+
+                                        Products + Grid
+
+                                    </a>
+
+                                </li>
+                                <li>
+
+                                    <a href="element-product-single.html">
+
+                                        Product Single
+
+                                    </a>
+                                </li>
+                                <li>
+
+                                    <a href="element-product-tab.html">
+
+                                        Products + Tab
+
+                                    </a>
+
+                                </li>
+                                <li>
+
+                                    <a href="element-single-product.html">
+
+                                        Single Product
+
+                                    </a>
+
+                                </li>
+                                <li>
+
+                                    <a href="element-slider.html">
+
+                                        Slider
+
+                                    </a>
+
+                                </li>
+                                <li><a href="element-social-link.html">Social Icons </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Elements 4</a>
+                            <ul>
+                                <li>
+
+                                    <a href="element-subcategory.html">
+
+                                        Subcategory
+
+                                    </a>
+
+                                </li>
+                                <li>
+
+                                    <a href="element-svg-floating.html">
+
+                                        Svg Floating
+
+                                    </a>
+
+                                </li>
+                                <li><a href="element-tabs.html">Tabs</a></li>
+                                <li>
+
+                                    <a href="element-testimonials.html">
+
+                                        Testimonials
+                                    </a>
+
+                                </li>
+                                <li><a href="element-titles.html">Title</a></li>
+                                <li><a href="element-typography.html">Typography</a></li>
+                                <li>
+
+                                    <a href="element-vendor.html">
+
+                                        Vendor
+
+                                    </a>
+
+                                </li>
+                                <li>
+
+                                    <a href="element-video.html">
+
+                                        Video
+
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="https://d-themes.com/buynow/riode.html">Buy Riode!</a></li>
+            </ul>
+            <!-- End of MobileMenu -->
+            <!-- <ul class="mobile-menu mmenu-anim">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cart.html">My Cart</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+            </ul> -->
+            <!-- End of MobileMenu -->
+        </div>
+    </div>
+    <!-- sticky icons-->
+    <!-- Plugins JS File -->
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/parallax/parallax.min.js"></script>
+    <script src="~/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="~/vendor/elevatezoom/jquery.elevatezoom.min.js"></script>
+    <script src="~/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="~/vendor/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/vendor/owl-carousel/owl.carousel.min.js"></script>
+    <!-- Main JS File -->
+    <script src="~/js/main.js"></script>
+</body>
+</html>

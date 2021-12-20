@@ -1,0 +1,36 @@
+﻿@model DocumentaryUpdateDto
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/_PanelLayout.cshtml";
+}
+
+<main class="main">
+    <div class="page-content">
+        <section class="mt-4 pt-10 pb-8">
+            <div class="container">
+                <div class="tab-pane" id="account">
+                    <form asp-action="Update" method="post" enctype="multipart/form-data" class="form">
+                        <div asp-validation-summary="ModelOnly" class="text-color"></div>
+                        @Html.HiddenFor(m => m.VideoPath)
+                        <label>Başlık</label>
+                        <input type="text" asp-for="Title" class="form-control mb-0" name="Title" required="">
+                        <span asp-validation-for="Title"></span>
+
+                        <label>Video Seçiniz</label>
+                        <input type="file" asp-for="FileDoc" class="form-control" name="FileDoc" value="fileUpload">
+                        <label for="fileUpload">@Model.VideoPath</label>
+                        <span asp-validation-for="FileDoc"></span>
+                        <label>Durum</label>
+                        <input type="checkbox" asp-for="Status" name="Status" id="switch" />
+                        <label class="togglechck" for="switch">Toggle</label>
+                        <span asp-validation-for="Status"></span>
+                        <br/>
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                        <a asp-action="Index" class="btn btn-secondary">Tüm Videolar</a>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+

@@ -1,0 +1,147 @@
+﻿@model HomeViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@* video *@
+@foreach (var item in Model.Videos)
+{
+    @if (item.Status == true)
+    {
+        <div class="inner-video overlay-dark">
+            <figure>
+                <a href="#">
+                    <img src="~/images/1.jpg" width="100%" height="100%" alt="inner-video">
+                </a>
+                <span class="video-play"></span>
+                <video>
+                    <source src="~/@item.VideoPath" width="100%" height="100%" type="video/mp4">
+                </video>
+            </figure>
+        </div>
+    }
+}
+@* video *@
+
+<section class="slide-effect mt-10 pt-7">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                @* Duyurular *@
+                <div class="code-template">
+                    <div class="code-content">
+                        <div class="owl-carousel owl-theme owl-dot-inner owl-dot-white row cols-1 gutter-no"
+                             data-owl-options="{
+                                                'items': 1,
+                                                'autoplay': true,
+                                                'mouseDrag': false,
+                                                'touchDrag': false,
+                                                'loop': true,
+                                                'nav': false,
+                                                'autoplayTimeout': 3000,
+                                                'dots': true,
+                                                'animateIn': 'fadeIn',
+                                                'animateOut': 'fadeOut'
+                                            }">
+
+                            @foreach (var item in Model.Advertisements)
+                            {
+                                @if (item.Status == true)
+                                {
+                                    <div class="category category-group-image appear-animate" data-animation-options="{
+                                'name': 'fadeIn'
+                            }">
+                                        <a href="#">
+                                            <figure class="category-media">
+                                                <img src="~/@item.ImagePath" alt="category" width="190"
+                                             height="169" />
+                                            </figure>
+                                        </a>
+                                        <div class="category-content">
+                                            <h4 class="category-name"><a href="shop.html">@item.Title</a></h4>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+                @* Duyurular *@
+            </div>
+            <div class="col-md-4 col-sm-12">
+                @* Tanıtım *@
+                @foreach (var item in Model.Presentations)
+                {
+                    @if (item.Status == true)
+                    {
+                        <div class="inner-video overlay-dark">
+                            <figure>
+                                <a href="#">
+                                    <img src="~/images/1.jpg" width="100%" height="100%" alt="inner-video">
+                                </a>
+                                <span class="video-play"></span>
+                                <video>
+                                    <source src="~/@item.VideoPath" width="100%" height="100%" type="video/mp4">
+                                </video>
+                            </figure>
+                        </div>
+                    }
+                }
+                @* Tanıtım *@
+            </div>
+            <div class="col-md-4 col-sm-12">
+                @* Belgesel *@
+                @foreach (var item in Model.Documentaries)
+                {
+                    @if (item.Status == true)
+                    {
+                        <div class="inner-video overlay-dark">
+                            <figure>
+                                <a href="#">
+                                    <img src="~/images/1.jpg" width="100%" height="100%" alt="inner-video">
+                                </a>
+                                <span class="video-play"></span>
+                                <video>
+                                    <source src="~/@item.VideoPath" width="100%" height="100%" type="video/mp4">
+                                </video>
+                            </figure>
+                        </div>
+                    }
+                }
+                @* Belgesel *@
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mt-10 pt-7">
+    <div class="code-template">
+        <div class="banner banner-background parallax text-center code-content"
+             data-option="{'offset': -60}" data-image-src="images/elements/banner/parallax.jpg"
+             style="background-image: linear-gradient(to right, #4b87e1, #00a0ee, #00b6f2, #00cbee, #0fdde5); vertical-align:central;">
+            <div class="container">
+                <div class="banner-content appear-animate"
+                     data-animation-options="{'name': 'blurIn', 'duration': '1s', 'delay': '.2s'}">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    @foreach (var item in Model.BreadCrumbs)
+                    {
+                        @if (item.Status == true)
+                        {
+                            <h1 class="banner-subtitle text-white font-weight-bold ls-l">
+                                @item.Title
+                            </h1>
+                            <h3 class="banner-title font-weight-bold text-white">@item.MiniHeader</h3>
+                            <p class="text-white ls-s">@item.Description</p>
+                        }
+                    }
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

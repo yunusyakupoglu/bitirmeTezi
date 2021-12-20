@@ -1,0 +1,12 @@
+D:\bitirmeTezi\OL\bin\Debug\net6.0\OL.deps.json
+D:\bitirmeTezi\OL\bin\Debug\net6.0\OL.dll
+D:\bitirmeTezi\OL\bin\Debug\net6.0\ref\OL.dll
+D:\bitirmeTezi\OL\bin\Debug\net6.0\OL.pdb
+D:\bitirmeTezi\OL\obj\Debug\net6.0\OL.csproj.AssemblyReference.cache
+D:\bitirmeTezi\OL\obj\Debug\net6.0\OL.GeneratedMSBuildEditorConfig.editorconfig
+D:\bitirmeTezi\OL\obj\Debug\net6.0\OL.AssemblyInfoInputs.cache
+D:\bitirmeTezi\OL\obj\Debug\net6.0\OL.AssemblyInfo.cs
+D:\bitirmeTezi\OL\obj\Debug\net6.0\OL.csproj.CoreCompileInputs.cache
+D:\bitirmeTezi\OL\obj\Debug\net6.0\OL.dll
+D:\bitirmeTezi\OL\obj\Debug\net6.0\ref\OL.dll
+D:\bitirmeTezi\OL\obj\Debug\net6.0\OL.pdb

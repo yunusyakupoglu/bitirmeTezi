@@ -1,0 +1,81 @@
+﻿@model UserCreateModel
+
+@{
+    ViewData["Title"] = "SignUp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav class="breadcrumb-nav">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="demo1.html"><i class="d-icon-home"></i></a></li>
+            <li><a asp-controller="Home" asp-action="Index">Düzce Üniversitesi</a></li>
+            <li>Kayıt Ol</li>
+        </ul>
+    </div>
+</nav>
+<div class="page-content mt-6 pb-2 mb-10">
+    <div class="container">
+        <div class="login-popup">
+            <div class="form-box">
+                <div class="tab tab-nav-simple tab-nav-boxed form-tab">
+                    <ul class="nav nav-tabs nav-fill align-items-center border-no justify-content-center mb-5"
+                        role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active border-no lh-1 ls-normal" href="#register">Kayıt Ol</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="register">
+                            <form asp-action="SignUp" method="post">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" asp-for="@Model.FirstName" placeholder="Adınız *" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" asp-for="@Model.SurName" placeholder="Soyadınız *" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" asp-for="@Model.UserName" placeholder="Kullanıcı Adınız *" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" asp-for="@Model.Email" placeholder="E-Mail Adresiniz *" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" asp-for="@Model.PhoneNumber" placeholder="Telefon Numaranız *" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" asp-for="@Model.Password" placeholder="Parolanız *" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" asp-for="@Model.ConfirmPassword" placeholder="Lütfen Parolanızı Tekrar Giriniz *" required />
+                                </div>
+                                <div class="form-check form-check-inline" hidden>
+                                    <input class="form-check-input material-inputs" type="checkbox" asp-for="@Model.Status" checked>
+                                    <label class="form-check-label" asp-for="@Model.Status">
+                                        Aktif
+                                    </label>
+                                </div>
+                                <button class="btn btn-dark btn-block btn-rounded"
+                                        type="submit">
+                                    Kayıt Ol
+                                </button>
+                                <div class="text-danger" asp-validation-summary="All"></div>
+                            </form>
+                            @*                            <div class="form-choice text-center">
+                                <label class="ls-m">or Register With</label>
+                                <div class="social-links">
+                                <a href="#"
+                                class="social-link social-google fab fa-google border-no"></a>
+                                <a href="#"
+                                class="social-link social-facebook fab fa-facebook-f border-no"></a>
+                                <a href="#"
+                                class="social-link social-twitter fab fa-twitter border-no"></a>
+                                </div>
+                                </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
