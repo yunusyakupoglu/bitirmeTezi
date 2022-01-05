@@ -1,0 +1,86 @@
+﻿@page "/Advertisement/Create"
+@using Blazor_UI.Data
+@inject IHttpClientFactory ClientFactory
+@inject AdvertisementApiRequests advertisementapi
+@inject HttpClient http;
+@inject IJSRuntime JSRuntime;
+
+
+<main class="main">
+    <div class="page-content">
+        <section class="mt-4 pt-10 pb-8">
+            <div class="container">
+                <div class="tab-pane" id="account">
+                    <EditForm Model="@advertisementCreateDto" OnSubmit="@HandleSubmit" enctype="multipart/form-data" class="form">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                        <label>Duyuru Başlığı</label>
+                        <InputText class="form-control mb-0" @bind-Value="advertisementCreateDto.Title" required="" />
+                        <span asp-validation-for="Title"></span>
+
+                        <label>Resim Seçiniz</label>
+                        <InputFile class="form-control" OnChange="OnInputFileChange" @bind-Value="advertisementCreateDto.FileDoc" required="" />
+                        <span asp-validation-for="FileDoc"></span>
+                        <div>
+                            <label>Durum</label>
+                            <InputCheckbox id="switch" @bind-Value="advertisementCreateDto.Status" />
+                            <label class="togglechck" for="switch">Toggle</label>
+                            <span asp-validation-for="Status"></span>
+                        </div>
+                        <br />
+
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                        <a href="/Advertisement" class="btn btn-secondary">Tüm Duyurular</a>
+                    </EditForm>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+@code {
+    private AdvertisementCreateDtoBlazor advertisementCreateDto = new AdvertisementCreateDtoBlazor();
+
+
+
+    private async void HandleSubmit()
+    {
+        if (advertisementCreateDto.FileDoc is not null)
+        {
+
+            string path = Path.Combine("D:\\bitirmeTezi\\UI\\wwwroot", "img\\upload");
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
+            string fileName = Path.GetFileName(advertisementCreateDto.FileDoc.Name);
+            string[] filenamedot = fileName.Split('.');
+            string fileename = filenamedot[0];
+            fileename = DateTime.Now.ToString("dd-MM-yyyy-HH-mm") + "-" + fileename + "." + filenamedot[filenamedot.Length - 1].ToString();
+            using (FileStream stream = new(Path.Combine(path, fileename), FileMode.Create))
+            {
+                await advertisementCreateDto.FileDoc.OpenReadStream(maxAllowedSize:102400000).CopyToAsync(stream);
+            }
+            //string host = _httpContextAccessor.HttpContext.Request.Host.Value;
+            //string FileNameFinal = Path.Combine(this._hostEnvironment.WebRootPath, "img", fileename);
+            string fileNameFinal = "img/upload/" + fileename;
+            advertisementCreateDto.ImagePath = fileNameFinal;
+        }
+        else
+        {
+            advertisementCreateDto.ImagePath = "img/team/profile-picture-1.jpg";
+        }
+
+        advertisementapi.CreateAsync(advertisementCreateDto).Wait();
+
+    }
+
+    private void OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        advertisementCreateDto.FileDoc = e.File;
+
+        this.StateHasChanged();
+    }
+}

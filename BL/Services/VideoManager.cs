@@ -23,14 +23,13 @@ namespace BL.Services
         private readonly IWebHostEnvironment _env;
         private readonly IValidator<VideoCreateDto> _createDtoValidator;
 
-        public VideoManager(IMapper mapper, IValidator<VideoCreateDto> createDtoValidator, IValidator<VideoUpdateDto> updateDtoValidator, IUnitOfWork unitOfWork, IWebHostEnvironment env) : 
+        public VideoManager(IMapper mapper, IValidator<VideoCreateDto> createDtoValidator, IValidator<VideoUpdateDto> updateDtoValidator, IUnitOfWork unitOfWork, IWebHostEnvironment env) :
             base(mapper, createDtoValidator, updateDtoValidator, unitOfWork)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _env = env;
             _createDtoValidator = createDtoValidator;
-
         }
 
         public string DeleteVideo(string filename)

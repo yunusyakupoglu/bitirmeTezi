@@ -1,0 +1,84 @@
+﻿@page "/Presentation/Create"
+@using Blazor_UI.Data
+@inject IHttpClientFactory ClientFactory
+@inject PresentationApiRequests presentationapi
+@inject HttpClient http;
+@inject IJSRuntime JSRuntime;
+
+<main class="main">
+    <div class="page-content">
+        <section class="mt-4 pt-10 pb-8">
+            <div class="container">
+                <div class="tab-pane" id="account">
+                    <EditForm Model="@presentationCreateDto" OnSubmit="@HandleSubmit" enctype="multipart/form-data" class="form">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                        <label>Video Adı</label>
+                        <InputText type="text" class="form-control mb-0" @bind-Value="presentationCreateDto.Title" />
+                        <span asp-validation-for="Name"></span>
+
+                        <label>Video Seçiniz</label>
+                        <InputFile class="form-control" OnChange="OnInputFileChange" @bind-Value="presentationCreateDto.FileDoc" />
+                        <span asp-validation-for="FileDoc"></span>
+                        <br />
+                        <div>
+                            <label>Durum</label>
+                            <InputCheckbox id="switch" @bind-Value="presentationCreateDto.Status" />
+                            <label class="togglechck" for="switch">Toggle</label>
+                            <span asp-validation-for="Status"></span>
+                        </div>
+                        <br />
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                        <a href="/Presentation" class="btn btn-secondary">Tüm Tanıtımlar</a>
+                    </EditForm>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+@code {
+    private PresentationCreateDtoBlazor presentationCreateDto = new PresentationCreateDtoBlazor();
+
+
+
+    private async void HandleSubmit()
+    {
+        if (presentationCreateDto.FileDoc is not null)
+        {
+
+            string path = Path.Combine("D:\\bitirmeTezi\\UI\\wwwroot", "videos\\upload");
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
+            string fileName = Path.GetFileName(presentationCreateDto.FileDoc.Name);
+            string[] filenamedot = fileName.Split('.');
+            string fileename = filenamedot[0];
+            fileename = DateTime.Now.ToString("dd-MM-yyyy-HH-mm") + "-" + fileename + "." + filenamedot[filenamedot.Length - 1].ToString();
+            using (FileStream stream = new(Path.Combine(path, fileename), FileMode.Create))
+            {
+                await presentationCreateDto.FileDoc.OpenReadStream(maxAllowedSize:102400000).CopyToAsync(stream);
+            }
+            //string host = _httpContextAccessor.HttpContext.Request.Host.Value;
+            //string FileNameFinal = Path.Combine(this._hostEnvironment.WebRootPath, "img", fileename);
+            string fileNameFinal = "videos/upload/" + fileename;
+            presentationCreateDto.VideoPath = fileNameFinal;
+        }
+        else
+        {
+            presentationCreateDto.VideoPath = "img/team/profile-picture-1.jpg";
+        }
+
+        presentationapi.CreateAsync(presentationCreateDto).Wait();
+
+    }
+
+    private void OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        presentationCreateDto.FileDoc = e.File;
+
+        this.StateHasChanged();
+    }
+}

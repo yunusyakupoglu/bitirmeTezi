@@ -1,0 +1,91 @@
+﻿@page "/Video/Create"
+@using BL.IServices
+@using Blazor_UI.Data
+@using Common
+@using DTOs
+@using System.Text.Json
+@using System.Text.Json.Serialization
+@using Newtonsoft.Json
+@using UI.Controllers
+@inject IHttpClientFactory ClientFactory
+@inject VideoApiRequests videoapi
+@inject HttpClient http;
+@inject IJSRuntime JSRuntime;
+<main class="main">
+    <div class="page-content">
+        <section class="mt-4 pt-10 pb-8">
+            <div class="container">
+                <div class="tab-pane" id="account">
+                    <EditForm Model="@videoCreateDto" OnSubmit="@HandleSubmit" enctype="multipart/form-data" class="form">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                        <label>Video Adı</label>
+                        <InputText type="text" class="form-control mb-0" @bind-Value="videoCreateDto.Name" />
+                        <span asp-validation-for="Name"></span>
+
+                        <label>Video Seçiniz</label>
+                        <InputFile class="form-control" OnChange="OnInputFileChange" @bind-Value="videoCreateDto.FileDoc" />
+                        <span asp-validation-for="FileDoc"></span>
+                        <div>
+                            <label>Durum</label>
+                            <InputCheckbox id="switch" @bind-Value="videoCreateDto.Status" />
+                            <label class="togglechck" for="switch">Toggle</label>
+                            <span asp-validation-for="Status"></span>
+                        </div>
+                        <br />
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                        <a href="/Video" class="btn btn-secondary">Tüm Videolar</a>
+                    </EditForm>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+@code {
+    private VideoCreateDtoBlazor videoCreateDto = new VideoCreateDtoBlazor();
+
+
+
+    private async void HandleSubmit()
+    {
+        if (videoCreateDto.FileDoc is not null)
+        {
+
+            string path = Path.Combine("D:\\bitirmeTezi\\UI\\wwwroot", "videos\\upload");
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
+            string fileName = Path.GetFileName(videoCreateDto.FileDoc.Name);
+            string[] filenamedot = fileName.Split('.');
+            string fileename = filenamedot[0];
+            fileename = DateTime.Now.ToString("dd-MM-yyyy-HH-mm") + "-" + fileename + "." + filenamedot[filenamedot.Length - 1].ToString();
+            using (FileStream stream = new(Path.Combine(path, fileename), FileMode.Create))
+            {
+                await videoCreateDto.FileDoc.OpenReadStream(maxAllowedSize:102400000).CopyToAsync(stream);
+            }
+            //string host = _httpContextAccessor.HttpContext.Request.Host.Value;
+            //string FileNameFinal = Path.Combine(this._hostEnvironment.WebRootPath, "img", fileename);
+            string fileNameFinal = "videos/upload/" + fileename;
+            videoCreateDto.VideoPath = fileNameFinal;
+        }
+        else
+        {
+            videoCreateDto.VideoPath = "img/team/profile-picture-1.jpg";
+        }
+
+        videoapi.CreateAsync(videoCreateDto).Wait();
+
+    }
+
+    private void OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        videoCreateDto.FileDoc = e.File;
+
+        this.StateHasChanged();
+    }
+
+
+
+}

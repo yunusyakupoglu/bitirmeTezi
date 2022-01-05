@@ -1,0 +1,77 @@
+﻿@page "/Link"
+@using Blazor_UI.Data
+@using DTOs
+@inject IHttpClientFactory ClientFactory
+@inject LinkApiRequests linkapi
+
+<main class="main">
+    <div class="page-content">
+        <section class="mt-4 pt-10 pb-8">
+            <div class="container">
+                <div>
+                    <a href="/Link/Create" class="btn btn-primary">Yeni Link Ekle</a>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="code-template">
+                            <div class="accordion accordion-card-bg accordion-primary accordion-boxed accordion-plus accordion-gutter-md code-content">
+                                @foreach (var item in linkmanager)
+                                {
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <a href="#collapse6-2" class="expand">@item.Title</a>
+                                        </div>
+                                        <div id="collapse6-2" class="collapsed">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-2">
+                                                                @if (@item.Status == true)
+                                                                {
+                                                                    <input type="checkbox" name="Status" id="switch" checked disabled />
+                                                                    <label class="togglechck" for="switch">Toggle</label>
+                                                                }
+                                                                else if (@item.Status == false)
+                                                                {
+                                                                    <input type="checkbox" name="Status" id="switch" disabled />
+                                                                    <label class="togglechck" for="switch">Toggle</label>
+                                                                }
+                                                            </div>
+                                                            <div class="col-md-5">
+                                                                <p class="post-content">
+                                                                    @item.Url
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-5">
+                                                                <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-link btn-secondary btn-underline">
+                                                                    Güncelle <i class="far fa-edit"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</main>
+
+@code {
+    private List<LinkListDto> linkmanager = new List<LinkListDto>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        linkmanager = await linkapi.GetAllAsync();
+    }
+}

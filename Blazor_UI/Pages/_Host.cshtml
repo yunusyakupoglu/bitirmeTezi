@@ -1,0 +1,181 @@
+﻿@page "/"
+@namespace Blazor_UI.Pages
+@using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Authentication.Cookies
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <title>Riode - Ultimate eCommerce Template</title>
+
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Riode - eCommerce Template">
+    <meta name="author" content="D-THEMES">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logos/du15yil.png">
+    <!-- Preload Font -->
+    <link rel="preload" href="/fonts/riode.ttf?5gap68" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/vendor/fontawesome-free/webfonts/fa-solid-900.woff2" as="font" type="font/woff2"
+          crossorigin="anonymous">
+    <link rel="preload" href="/vendor/fontawesome-free/webfonts/fa-brands-400.woff2" as="font" type="font/woff2"
+          crossorigin="anonymous">
+    <script>
+        WebFontConfig = {
+            google: { families: [ 'Poppins:400,500,600,700,800' ] }
+        };
+        ( function ( d ) {
+            var wf = d.createElement( 'script' ), s = d.scripts[ 0 ];
+            wf.src = 'js/webfont.js';
+            wf.async = true;
+            s.parentNode.insertBefore( wf, s );
+        } )( document );
+    </script>
+
+
+
+    <link rel="stylesheet" type="text/css" href="/vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/vendor/animate/animate.min.css">
+
+    <!-- Plugins CSS File -->
+@*    <link rel="stylesheet" type="text/css" href="/vendor/magnific-popup/magnific-popup.min.css">
+*@    <link rel="stylesheet" type="text/css" href="/vendor/owl-carousel/owl.carousel.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/vendor/sticky-icon/stickyicon.css">
+    <link rel="stylesheet" type="text/css" href="/vendor/codemirror/codemirror.css">
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" type="text/css" href="/css/demo26.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/accordion.css">
+    <link rel="stylesheet" type="text/css" href="/css/checkbox.css">
+</head>
+
+<body class="with-flex-container">
+
+    <div class="page-wrapper">
+        <h1 class="d-none">Riode - Responsive eCommerce HTML Template</h1>
+        <header class="header">
+            <!-- End HeaderTop -->
+            <div class="header-middle sticky-header fix-top sticky-content">
+                <div class="container">
+                    <div class="header-left">
+                        <a href="#" class="left-sidebar-toggle" title="sidebar-toggle">
+                            <i class="d-icon-bars2"></i>
+                        </a>
+                        <!-- End Logo -->
+                        <a href="tel:#" class="icon-box icon-box-side">
+                            <div class="icon-box-icon mr-0 mr-lg-2">
+                                <i class="d-icon-phone"></i>
+                            </div>
+                            <div class="icon-box-content">
+                                <h4 class="icon-box-title">Bize Ulaşın:</h4>
+                                <p>0(850) 800 81 81</p>
+                            </div>
+                        </a>
+                        <!-- End Call -->
+                    </div>
+                    <div class="header-center">
+                        <a href="#" class="logo d-lg-none d-block">
+                            <img src="/images/logos/du15yilyazi.png" alt="logo" width="153" height="44" />
+                        </a>
+                        <div class="header-search hs-simple">
+                            <form action="#" method="get" class="input-wrapper">
+                                <input type="text" class="form-control" name="search" id="search"
+                                       placeholder="Search..." required="">
+                                <button class="btn btn-search" type="submit" title="submit-button">
+                                    <i class="d-icon-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <!-- End Header Search -->
+                    </div>
+                    <div class="header-right">
+                        <a href="https://localhost:5001/Account/LogOut" title="login">
+                            <i class="fas fa-sign-out-alt fa-4x"></i>
+                        </a>
+
+                        <!-- End Login -->
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <!-- End Header -->
+        <component type="typeof(App)" render-mode="ServerPrerendered" />
+        <!-- End Main -->
+    </div>
+
+    <aside class="sidebar category-sidebar ">
+        <div class="sidebar-overlay">
+            <a class="sidebar-close" href="#"><i class="d-icon-times"></i></a>
+        </div>
+        <div class="sidebar-content d-flex flex-column">
+            <a href="#" class="logo">
+                <img src="/images/logos/du15yilyazi.png" alt="logo" width="153"
+                     height="44" />
+            </a>
+            <ul class="menu toggle-menu category-menu">               
+                <li>
+                    <a href="/Video">
+                        <i class="d-icon-play-circle"></i>
+                        Video
+                    </a>
+                </li>
+                <li>
+                    <a href="/Advertisement">
+                        <i class="d-icon-headphone"></i>
+                        Duyuru
+                    </a>
+                </li>
+                <li>
+                    <a href="/Documentary">
+                        <i class="d-icon-camera2"></i>
+                        Belgesel
+                    </a>
+                </li>
+                <li>
+                    <a href="/BreadCrumb">
+                        <i class="d-icon-layer"></i>
+                        BreadCrumb
+                    </a>
+                </li>
+                <li>
+                    <a href="/Counter">
+                        <i class="d-icon-abacus"></i>
+                        Counter
+                    </a>
+                </li>
+                <li>
+                    <a href="/Link">
+                        <i class="d-icon-arrow-right"></i>
+                        Link
+                    </a>
+                </li>
+                <li>
+                    <a href="/Presentation">
+                        <i class="d-icon-zoom"></i>
+                        Tanıtım
+                    </a>
+                </li>
+            </ul>
+            <div class="social-links no-border">
+                <a href="#" title="social-link" class="social-link social-facebook fab fa-facebook-f"></a>
+                <a href="#" title="social-link" class="social-link social-twitter fab fa-twitter"></a>
+                <a href="#" title="social-link" class="social-link social-linkedin fab fa-linkedin-in"></a>
+            </div>
+        </div>
+    </aside>
+    <!-- End Category Sidebar -->
+    <!-- Scroll Top -->
+    <a id="scroll-top" href="#top" title="Top" role="button" class="scroll-top"><i class="d-icon-arrow-up"></i></a>
+
+</body>
+
+</html>

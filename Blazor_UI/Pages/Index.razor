@@ -1,0 +1,138 @@
+﻿@page "/"
+@inject IJSRuntime JSRuntime;
+
+<main class="main home">
+    <div class="page-content">
+        <section class="categories pt-10 pb-10" style="background-color: #fff">
+            <div class="container pt-5 pb-6">
+                <div class="row cols-2 cols-sm-3 cols-md-3 cols-lg-3">
+                    <div class="category-wrap mb-4">
+                        <div class="category category-icon">
+                            <a href="#">
+                                <figure class="categroy-media">
+                                    <i class="d-icon-play-circle"></i>
+                                </figure>
+                                <div class="category-content">
+                                    <h4 class="category-name font-weight-normal ls-normal">Video</h4>
+                                    <ul class="category-list">
+                                        <li><a href="/Video">Tüm Videolar</a></li>
+                                        <li><a href="/Video/Create">Yeni Video Ekle</a></li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="category-wrap mb-4">
+                        <div class="category category-icon">
+                            <a href="#">
+                                <figure class="categroy-media">
+                                    <i class="d-icon-headphone"></i>
+                                </figure>
+                                <div class="category-content">
+                                    <h4 class="category-name font-weight-normal ls-normal">Duyuru</h4>
+                                    <ul class="category-list">
+                                        <li><a href="/Advertisement">Tüm Duyurular</a></li>
+                                        <li><a href="/Advertisement/Create">Yeni Duyuru Ekle</a></li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="category-wrap mb-4">
+                        <div class="category category-icon">
+                            <a href="#">
+                                <figure class="categroy-media">
+                                    <i class="d-icon-camera2"></i>
+                                </figure>
+                                <div class="category-content">
+                                    <h4 class="category-name font-weight-normal ls-normal">Belgesel</h4>
+                                    <ul class="category-list">
+                                        <li><a href="/Documentary">Tüm Belgeseller</a></li>
+                                        <li><a href="/Documentary/Create">Yeni Belgesel Ekle</a></li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="category-wrap mb-4">
+                        <div class="category category-icon">
+                            <a href="#">
+                                <figure class="categroy-media">
+                                    <i class="d-icon-layer"></i>
+                                </figure>
+                                <div class="category-content">
+                                    <h4 class="category-name font-weight-normal ls-normal">
+                                        BreadCrumb
+                                    </h4>
+                                    <ul class="category-list">
+                                        <li><a href="/BreadCrumb">Tüm BreadCrumblar</a></li>
+                                        <li><a href="/BreadCrumb/Create">Yeni BreadCrumb Ekle</a></li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="category-wrap mb-4">
+                        <div class="category category-icon">
+                            <a href="#">
+                                <figure class="categroy-media">
+                                    <i class="d-icon-abacus"></i>
+                                </figure>
+                                <div class="category-content">
+                                    <h4 class="category-name font-weight-normal ls-normal">Counter</h4>
+                                    <ul class="category-list">
+                                        <li><a href="/Counter">Tüm Counterlar</a></li>
+                                        <li><a href="/Counter/Create">Yeni Counter Ekle</a></li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="category-wrap mb-4">
+                        <div class="category category-icon">
+                            <a href="#">
+                                <figure class="categroy-media">
+                                    <i class="d-icon-arrow-right"></i>
+                                </figure>
+                                <div class="category-content">
+                                    <h4 class="category-name font-weight-normal ls-normal">
+                                        Link
+                                    </h4>
+                                    <ul class="category-list">
+                                        <li><a href="/Link">Tüm Linkler</a></li>
+                                        <li><a href="/Link/Create">Yeni Link Ekle</a></li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="category-wrap mb-4">
+                        <div class="category category-icon">
+                            <a href="#">
+                                <figure class="categroy-media">
+                                    <i class="d-icon-zoom"></i>
+                                </figure>
+                                <div class="category-content">
+                                    <h4 class="category-name font-weight-normal ls-normal">Tanıtım</h4>
+                                    <ul class="category-list">
+                                        <li><a href="/Presentation">Tüm Tanıtımlar</a></li>
+                                        <li><a href="/Presentation/Create">Yeni Tanıtım Ekle</a></li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+
+
+            </div>
+        </section>
+    </div>
+
+</main>
+
+@code {
+
+}

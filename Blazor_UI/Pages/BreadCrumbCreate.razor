@@ -1,0 +1,51 @@
+﻿@page "/Breadcrumb/Create"
+@using Blazor_UI.Data
+@inject IHttpClientFactory ClientFactory
+@inject BreadCrumbApiRequests breadcrumbapi
+@inject HttpClient http;
+@inject IJSRuntime JSRuntime;
+
+<main class="main">
+    <div class="page-content">
+        <section class="mt-4 pt-10 pb-8">
+            <div class="container">
+                <div class="tab-pane" id="account">
+                    <EditForm Model="@breadCrumbCreateDto" OnSubmit="@HandleSubmit" enctype="multipart/form-data" class="form">
+                        <div asp-validation-summary="ModelOnly" class="text-color"></div>
+                        <label>Başlık</label>
+                        <InputText class="form-control mb-0" @bind-Value="breadCrumbCreateDto.Title" required="" />
+                        <span asp-validation-for="Title"></span>
+
+                        <label>Açıklama</label>
+                        <InputText class="form-control mb-0" @bind-Value="breadCrumbCreateDto.MiniHeader" required="" />
+                        <span asp-validation-for="MiniHeader"></span>
+
+                        <label>İçerik</label>
+                        <InputTextArea class="form-control" @bind-Value="breadCrumbCreateDto.Description" required="" style="margin: 0px; width: 890px; height: 150px;"></InputTextArea>
+                        <span asp-validation-for="Description"></span>
+                        <br />
+                        <div>
+                            <label>Durum</label>
+                            <InputCheckbox id="switch" @bind-Value="breadCrumbCreateDto.Status" />
+                            <label class="togglechck" for="switch">Toggle</label>
+                            <span asp-validation-for="Status"></span>
+                        </div>
+                        <br />
+
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                        <a href="/Breadcrumb" class="btn btn-secondary">Tüm Breadcrumblar</a>
+                    </EditForm>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+@code {
+    private BreadCrumbCreateDtoBlazor breadCrumbCreateDto = new BreadCrumbCreateDtoBlazor();
+
+    private async void HandleSubmit()
+    {
+        breadcrumbapi.CreateAsync(breadCrumbCreateDto).Wait();
+    }
+}

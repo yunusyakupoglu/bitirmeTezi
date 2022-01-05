@@ -1,0 +1,49 @@
+﻿@page "/Counter/Create"
+@using Blazor_UI.Data
+@inject IHttpClientFactory ClientFactory
+@inject CounterApiRequests counterapi
+@inject HttpClient http;
+@inject IJSRuntime JSRuntime;
+
+<main class="main">
+    <div class="page-content">
+        <section class="mt-4 pt-10 pb-8">
+            <div class="container">
+                <div class="tab-pane" id="account">
+                    <EditForm Model="@counterCreateDto" OnSubmit="@HandleSubmit" enctype="multipart/form-data" class="form">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                        <label>Başlık</label>
+                        <InputText class="form-control mb-0" @bind-Value="counterCreateDto.Title" required="" />
+                        <span asp-validation-for="Title"></span>
+
+                        <label>Değer</label>
+                        <InputText class="form-control mb-0" @bind-Value="counterCreateDto.Count" required="" />
+                        <span asp-validation-for="Count"></span>
+                        <br />
+                        <div>
+                            <label>Durum</label>
+                            <InputCheckbox id="switch"  @bind-Value="counterCreateDto.Status" />
+                            <label class="togglechck" for="switch">Toggle</label>
+                            <span asp-validation-for="Status"></span>
+                        </div>
+                        <br />
+
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                        <a href="/Counter" class="btn btn-secondary">Tüm Counterlar</a>
+
+                    </EditForm>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+@code {
+    private CounterCreateDtoBlazor counterCreateDto = new CounterCreateDtoBlazor();
+
+    private async void HandleSubmit()
+    {
+        counterapi.CreateAsync(counterCreateDto).Wait();
+    }
+}

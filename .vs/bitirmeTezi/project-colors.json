@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "5b589747-8dae-49dd-a9ff-5d43160f94d3": {
+      "ProjectGuid": "5b589747-8dae-49dd-a9ff-5d43160f94d3",
+      "DisplayName": "BlazorAdmin",
+      "ColorIndex": 0
+    },
+    "3df9d1d3-71ad-4a32-acc8-7727ea66a17f": {
+      "ProjectGuid": "3df9d1d3-71ad-4a32-acc8-7727ea66a17f",
+      "DisplayName": "BlazorAdmin",
+      "ColorIndex": 1
+    },
+    "47652e6b-f36a-4996-b77a-9a29e209d3ac": {
+      "ProjectGuid": "47652e6b-f36a-4996-b77a-9a29e209d3ac",
+      "DisplayName": "UI",
+      "ColorIndex": 2
+    },
+    "0a9e756c-744a-4b0a-910e-1691d5f8777c": {
+      "ProjectGuid": "0a9e756c-744a-4b0a-910e-1691d5f8777c",
+      "DisplayName": "BL",
+      "ColorIndex": 3
+    },
+    "97ddb91b-e50b-4c34-893e-6347d173e0a8": {
+      "ProjectGuid": "97ddb91b-e50b-4c34-893e-6347d173e0a8",
+      "DisplayName": "ADmin",
+      "ColorIndex": 4
+    },
+    "c5251d3f-d4e9-4b5f-8df6-e293cfc618bb": {
+      "ProjectGuid": "c5251d3f-d4e9-4b5f-8df6-e293cfc618bb",
+      "DisplayName": "BlazorApp1",
+      "ColorIndex": 5
+    },
+    "45ea11f8-b52c-4c7b-bb0a-af951b054cce": {
+      "ProjectGuid": "45ea11f8-b52c-4c7b-bb0a-af951b054cce",
+      "DisplayName": "BlazorAdmin",
+      "ColorIndex": 6
+    },
+    "91db882a-6532-437b-bcf0-487e8a9337f9": {
+      "ProjectGuid": "91db882a-6532-437b-bcf0-487e8a9337f9",
+      "DisplayName": "bb",
+      "ColorIndex": 7
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "45075350-3546-4e8b-9a09-deb5a0c43ee0": {
+      "ProjectGuid": "45075350-3546-4e8b-9a09-deb5a0c43ee0",
+      "DisplayName": "BlazorUI",
+      "ColorIndex": 8
+    },
+    "3565639d-c369-46b5-ba0c-b462613a8495": {
+      "ProjectGuid": "3565639d-c369-46b5-ba0c-b462613a8495",
+      "DisplayName": "Blazor_UI",
+      "ColorIndex": 9
+    },
+    "172689cb-553b-4df3-918e-5b2d04dee5dd": {
+      "ProjectGuid": "172689cb-553b-4df3-918e-5b2d04dee5dd",
+      "DisplayName": "BlazorApp3",
+      "ColorIndex": 10
+    },
+    "4f15e07f-a2bc-4a4f-9953-365f374b4ebc": {
+      "ProjectGuid": "4f15e07f-a2bc-4a4f-9953-365f374b4ebc",
+      "DisplayName": "DTOs",
+      "ColorIndex": 11
+    }
+  },
+  "NextColorIndex": 12
+}

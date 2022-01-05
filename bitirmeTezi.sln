@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI", "UI\UI.csproj", "{4765
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTOs", "DTOs\DTOs.csproj", "{4F15E07F-A2BC-4A4F-9953-365F374B4EBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{0F269FFB-5FFC-4F93-9513-56281B934043}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{0F269FFB-5FFC-4F93-9513-56281B934043}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_UI", "Blazor_UI\Blazor_UI.csproj", "{3565639D-C369-46B5-BA0C-B462613A8495}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{0F269FFB-5FFC-4F93-9513-56281B934043}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F269FFB-5FFC-4F93-9513-56281B934043}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F269FFB-5FFC-4F93-9513-56281B934043}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3565639D-C369-46B5-BA0C-B462613A8495}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3565639D-C369-46B5-BA0C-B462613A8495}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3565639D-C369-46B5-BA0C-B462613A8495}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3565639D-C369-46B5-BA0C-B462613A8495}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -95,7 +95,8 @@ namespace UI.Controllers
                     new ClaimsPrincipal(claimsIdentity),
                     authProperties);
 
-                return RedirectToAction("Admin", "Home");
+                //return RedirectToAction("Admin", "Home");
+                return Redirect("https://localhost:7017/");
             }
             ModelState.AddModelError("", result.Message);
             return View(dto);
