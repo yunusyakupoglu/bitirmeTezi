@@ -65,7 +65,12 @@
       "ProjectGuid": "4f15e07f-a2bc-4a4f-9953-365f374b4ebc",
       "DisplayName": "DTOs",
       "ColorIndex": 11
+    },
+    "01319923-015e-466e-931a-228be1c16321": {
+      "ProjectGuid": "01319923-015e-466e-931a-228be1c16321",
+      "DisplayName": "Common",
+      "ColorIndex": 12
     }
   },
-  "NextColorIndex": 12
+  "NextColorIndex": 13
 }
